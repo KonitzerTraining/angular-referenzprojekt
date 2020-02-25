@@ -1,0 +1,41 @@
+// Implizte Typzuweisung
+var a = 234; // a soll nun number sein
+a = '234';
+// Explizite Typzuweisung mit :
+var b1;
+b1 = null;
+b1 = undefined;
+b1 = 34;
+var b2 = 'egal';
+var b3;
+// Oder
+var path = 'asdf';
+path = ['asdf'];
+// Collection
+var list = ['234', 234];
+// Tuple
+var record;
+record = [23, 'Hans', 'Berlin'];
+// Enum
+var Sendung;
+(function (Sendung) {
+    Sendung[Sendung["Verschollen"] = 0] = "Verschollen";
+    Sendung[Sendung["Gelagert"] = 1] = "Gelagert";
+    Sendung[Sendung["Unterwegs"] = 2] = "Unterwegs";
+    Sendung[Sendung["Geliefert"] = 3] = "Geliefert";
+})(Sendung || (Sendung = {}));
+var myPost = Sendung.Verschollen;
+if (myPost === Sendung.Verschollen) {
+    console.log('weg');
+}
+var c1 = {
+    id: 5,
+    name: 'hans',
+    phone: '02934890'
+};
+// Typ-Casting (Typescript)
+// Hat keinen Einfluß auf JavaScript
+var data = { id: 5, name: 'Peter' };
+// (data as Date).toLocaleString()
+console.log(data.name);
+//# sourceMappingURL=index.js.map
