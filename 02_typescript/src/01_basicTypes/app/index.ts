@@ -7,6 +7,8 @@ let b1: number;
 b1 = null;
 b1 = undefined;
 b1 = 34;
+console.log(b1);
+
 let b2: any = 'egal';
 
 let b3: null;
@@ -61,13 +63,13 @@ interface ICustomer extends IContact{
 let c1: ICustomer = {
     id: 5,
     name: 'hans',
-    phone: '02934890'
+    phone: '02934890',
 };
 
 // Typ-Casting (Typescript)
 // Hat keinen Einfluß auf JavaScript
 let data: any = {id: 5, name: 'Peter'};
-// (data as Date).toLocaleString()
+// (data as Date).toLocaleString();
 
 console.log((data as ICustomer).name);
 

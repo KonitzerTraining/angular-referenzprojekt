@@ -12,7 +12,6 @@ class CustomerComponent {
 
     private title: string;
 
-
     constructor() {
         this.title = 'Überschrift';
         this.customers = [
@@ -35,8 +34,8 @@ class CustomerComponent {
 
 console.log((new CustomerComponent()).render());
 
-function Component (config) {
-    return function (classRef) {
+function Component(config) {
+    return (classRef) => {
         classRef.prototype.render = function () {
             return config.template.replace('{{title}}', this.title);
         }

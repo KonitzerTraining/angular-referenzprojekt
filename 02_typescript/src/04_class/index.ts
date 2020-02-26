@@ -8,11 +8,12 @@ class Bekleidung extends Product {
     // private public
     public static readonly info: string = 'Only for testing';
 
-    constructor(private size: string, title: string, price: number) {
+    constructor(public size: string, title: string, price: number) {
         super(title, price);
         //this.size = size;
         console.log(size);
         console.log(this.size);
+        Object.seal(this);
     }
 
     public passtDas(s): boolean {
@@ -22,9 +23,14 @@ class Bekleidung extends Product {
     get info() {
         return Bekleidung.info;
     }
+    /*
+    set info() {
+
+    }*/
 }
 
 let b = new Bekleidung('L', 'Hemd', 43);
-console.log(Bekleidung.info);
+console.log(b.info);
+//console.log(Bekleidung.info);
 console.log(b.size);
 console.log(b.passtDas('M'));

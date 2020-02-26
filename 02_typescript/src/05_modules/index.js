@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var module_js_1 = require("./lib/module.js");
-console.log(module_js_1.test);
+import { test } from './lib/module.js';
+console.log(test);
 //# sourceMappingURL=index.js.map
