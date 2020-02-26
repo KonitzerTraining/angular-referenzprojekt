@@ -1,1 +1,0 @@
-console.log('EcmaScript 6 für Angular');
