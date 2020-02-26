@@ -8,8 +8,9 @@
 - Scopes
 
 ## Features you should know for Angular
-- Datatypes
 - let and const
+- Deconstruction
+- Template literal
 - ES6 Modules
 - ES6 Classes
 - Reflect API

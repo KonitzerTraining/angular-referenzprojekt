@@ -1,8 +1,8 @@
 export default class CustomerList {
 
     constructor() {
-        this.customers = [
-            {
+        this.customers = [ // array literal notation
+            { // object literal notation == new Object();
                 id: 3,
                 name: 'Hans',
             },
@@ -15,6 +15,7 @@ export default class CustomerList {
 
     searchForName(name) {
         return this.customers.filter((customer) => {
+            console.log(this);
             return customer.name === name;
         })
     }

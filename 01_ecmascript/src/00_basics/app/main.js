@@ -71,3 +71,4 @@ document.addEventListener('click', () => {
     console.dir(this);
 });
 
+window.ACME = window.ACME || {};

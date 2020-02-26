@@ -4,6 +4,15 @@ export default class CustomerList {
 
     constructor() {
         this.customers = [];
+
+        // ES6
+        Reflect.defineProperty(this, 'customers', {
+           value: [],
+           writable: true,
+           enumerable: true,
+           configurable: false
+        });
+
         this.httpClient = new HttpClient();
     }
 
