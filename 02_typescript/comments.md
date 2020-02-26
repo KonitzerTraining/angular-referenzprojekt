@@ -2,6 +2,9 @@
 
 ## Project setup
 
+NPM Commands:
+https://docs.npmjs.com/cli/install
+
 Angular uses its own watcher for TS-Compilation. In this part we will use the build-in watcher in TypeScript.
 
     > node -v   // 12.16.x
