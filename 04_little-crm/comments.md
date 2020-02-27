@@ -28,7 +28,8 @@ Add following lines to your angular.json file:
           "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
         ]
 
+Now add the necessary SCSS file in styles.scss in your src-folder:
 
-
+    @import "~bootstrap/scss/bootstrap";
     
     
