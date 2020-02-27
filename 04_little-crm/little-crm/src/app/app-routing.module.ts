@@ -4,7 +4,7 @@ import {PageStartComponent} from './components/page-start/page-start.component';
 import {PageTemplateSyntaxComponent} from './components/page-template-syntax/page-template-syntax.component';
 import {PageCustomersListComponent} from './components/page-customers-list/page-customers-list.component';
 import {PageDefaultComponent} from './components/page-default/page-default.component';
-
+import {PageCustomerEditComponent} from './components/page-customer-edit/page-customer-edit.component';
 
 const routes: Routes = [
   {
@@ -23,6 +23,10 @@ const routes: Routes = [
   {
     path: 'customers',
     component: PageCustomersListComponent
+  },
+  {
+    path: 'customers/:id/edit',
+    component: PageCustomerEditComponent
   },
   {
     path: '**',

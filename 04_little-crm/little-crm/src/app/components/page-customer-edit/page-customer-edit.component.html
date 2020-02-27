@@ -1,0 +1,18 @@
+<p>page-customer-edit works!</p>
+{{id}}
+
+<form [formGroup]="customerEditForm">
+
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" formControlName="name">
+  </div>
+
+  <div class="form-group">
+    <label for="Purchases">Purchases</label>
+    <input type="text" class="form-control" id="Purchases" formControlName="purchases">
+  </div>
+
+  <button type="button" class="btn btn-primary">Cancel</button>
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>

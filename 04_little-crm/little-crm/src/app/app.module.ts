@@ -13,6 +13,8 @@ import { NavigationMainComponent } from './components/navigation-main/navigation
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
 import {HttpClientModule} from '@angular/common/http';
+import { PageCustomerEditComponent } from './components/page-customer-edit/page-customer-edit.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 registerLocaleData(localeDe, 'de-DE');
 
@@ -24,10 +26,12 @@ registerLocaleData(localeDe, 'de-DE');
     PageTemplateSyntaxComponent,
     PageCustomersListComponent,
     PageDefaultComponent,
-    NavigationMainComponent
+    NavigationMainComponent,
+    PageCustomerEditComponent
   ],
   imports: [
     HttpClientModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule
   ],

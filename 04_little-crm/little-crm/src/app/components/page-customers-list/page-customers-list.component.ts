@@ -26,6 +26,10 @@ export class PageCustomersListComponent implements OnInit {
   }
 
   deleteCustomer(id: number) {
-    console.log(id);
+    this.customerService
+      .deleteCustomer(id)
+      .subscribe(() => {
+        this.getCustomers();
+      });
   }
 }
