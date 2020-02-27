@@ -1,5 +1,7 @@
 <h1>Customer List</h1>
 
+<pre>{{customers | json}}</pre>
+
 <table class="table table-striped">
   <thead>
   <tr>
@@ -9,8 +11,10 @@
   </tr>
   </thead>
   <tbody>
-  <tr>
-    <td>Lorem.</td>
+  <tr *ngFor="let customer of customers">
+    <td>{{customer.id}}</td>
+    <td>{{customer.name}}</td>
+    <td class="text-right">{{customer.purchases | currency:'EUR':'symbol':'1.2-2':'de-DE'}}</td>
   </tr>
   </tbody>
 </table>
