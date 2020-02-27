@@ -24,4 +24,8 @@ export class PageCustomersListComponent implements OnInit {
         this.customers = customers;
       });
   }
+
+  deleteCustomer(id: number) {
+    console.log(id);
+  }
 }
