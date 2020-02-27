@@ -12,8 +12,8 @@ import { NavigationMainComponent } from './components/navigation-main/navigation
 
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
+import {HttpClientModule} from '@angular/common/http';
 
-// the second parameter 'fr-FR' is optional
 registerLocaleData(localeDe, 'de-DE');
 
 
@@ -27,6 +27,7 @@ registerLocaleData(localeDe, 'de-DE');
     NavigationMainComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],

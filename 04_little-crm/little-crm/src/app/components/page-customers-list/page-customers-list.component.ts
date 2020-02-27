@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CustomerService} from '../../services/customer.service';
 
 @Component({
   selector: 'crm-page-customers-list',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageCustomersListComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private customerService: CustomerService) {
+  }
 
   ngOnInit(): void {
+    this.getCustomers();
+  }
+
+  getCustomers() {
+    this.customerService
+      .getAllCustomers()
+      .subscribe((customers) => {
+        console.log(customers);
+      });
   }
 
 }
