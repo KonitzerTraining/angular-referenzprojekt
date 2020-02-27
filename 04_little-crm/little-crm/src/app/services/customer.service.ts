@@ -19,4 +19,12 @@ export class CustomerService {
   deleteCustomer(id: number): Observable<any> {
     return this.http.delete(API_ENDPOINTS.customers + '/' + id);
   }
+
+  getOneCustomer(id: string) {
+    return this.http.get<ICustomer>(API_ENDPOINTS.customers + '/' + id);
+  }
+
+  updateCustomer(customer: ICustomer) {
+    return this.http.put<ICustomer>(API_ENDPOINTS.customers + '/' + customer.id, customer);
+  }
 }
