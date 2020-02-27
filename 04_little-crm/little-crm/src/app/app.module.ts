@@ -8,6 +8,7 @@ import { PageTemplateSyntaxComponent } from './components/page-template-syntax/p
 import { PageCustomersListComponent } from './components/page-customers-list/page-customers-list.component';
 import {PageStartComponent} from './components/page-start/page-start.component';
 import { PageDefaultComponent } from './components/page-default/page-default.component';
+import { NavigationMainComponent } from './components/navigation-main/navigation-main.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PageDefaultComponent } from './components/page-default/page-default.com
     PageStartComponent,
     PageTemplateSyntaxComponent,
     PageCustomersListComponent,
-    PageDefaultComponent
+    PageDefaultComponent,
+    NavigationMainComponent
   ],
   imports: [
     BrowserModule,
