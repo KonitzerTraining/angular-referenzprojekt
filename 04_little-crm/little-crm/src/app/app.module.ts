@@ -10,6 +10,13 @@ import {PageStartComponent} from './components/page-start/page-start.component';
 import { PageDefaultComponent } from './components/page-default/page-default.component';
 import { NavigationMainComponent } from './components/navigation-main/navigation-main.component';
 
+import { registerLocaleData } from '@angular/common';
+import localeDe from '@angular/common/locales/de';
+
+// the second parameter 'fr-FR' is optional
+registerLocaleData(localeDe, 'de-DE');
+
+
 @NgModule({
   declarations: [
     AppComponent,

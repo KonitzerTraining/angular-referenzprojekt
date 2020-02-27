@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageTemplateSyntaxComponent implements OnInit {
 
+  flag = 1;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  changeFlag(id: number) {
+    this.flag = id;
+  }
 }
