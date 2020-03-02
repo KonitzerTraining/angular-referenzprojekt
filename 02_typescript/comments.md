@@ -13,7 +13,7 @@ Angular uses its own watcher for TS-Compilation. In this part we will use the bu
     
 Delete following line in your package.json
 
-    "main": "index.js",
+    "main": "main.js",
     
 Add following line:
 
@@ -96,6 +96,7 @@ You can start your linter with:
 
 ## TS-Features you will need in Angular
 
+- TypeScript Type Defintions
 - TS Class Definitions
 - Usage of Decoarators
 - Interfaces, Classes and Enum

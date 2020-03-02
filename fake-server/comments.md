@@ -12,7 +12,7 @@ Create a start script for your fake-server.
 
 Delete following line:
 
-    "main": "index.js",
+    "main": "main.js",
     
 Add following line:
 

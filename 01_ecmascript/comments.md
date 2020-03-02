@@ -4,6 +4,7 @@
 
 - Datatypes
 - Basic Methods vor String and Array Manipulation
+- ParseInt, ...
 - Everything about Hoisting
 - Scopes
 
