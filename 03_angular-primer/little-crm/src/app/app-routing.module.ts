@@ -1,28 +1,29 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {StartPageComponent} from "./start-page/start-page.component";
-import {ImprintPageComponent} from "./imprint-page/imprint-page.component";
-import {CustomersPageComponent} from "./customers-page/customers-page.component";
+import {PageStartComponent} from "./page-start/page-start.component";
+import {PageCustomersComponent} from "./page-customers/page-customers.component";
+import {PageImprintComponent} from "./page-imprint/page-imprint.component";
 
 
 const routes: Routes = [
-    {
-       path: '',
-       redirectTo: '/start',
-       pathMatch: 'full'
-    },
-    {
-        path: 'start',
-        component: StartPageComponent
-    },
-    {
-        path: 'customers',
-        component: CustomersPageComponent
-    },
-    {
-        path: 'imprint',
-        component: ImprintPageComponent
-    }
+
+        {
+           path: '',
+           redirectTo: '/start',
+           pathMatch: 'full'
+        },
+        {
+            path: 'start',
+            component: PageStartComponent
+        },
+        {
+            path: 'customers',
+            component: PageCustomersComponent
+        },
+        {
+            path: 'imprint',
+            component: PageImprintComponent
+        }
 ];
 
 @NgModule({

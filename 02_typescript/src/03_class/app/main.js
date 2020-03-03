@@ -20,10 +20,16 @@ var Product = /** @class */ (function () {
 }());
 var Bekleidung = /** @class */ (function (_super) {
     __extends(Bekleidung, _super);
-    function Bekleidung(size, title, price) {
+    function Bekleidung(size, title, price, brand) {
         var _this = _super.call(this, title, price) || this;
         _this.size = size;
+        // Typüberprüfung zur Laufzeit fehlt
         //this.size = size;
+        //this.brand = brand;
+        Reflect.defineProperty(_this, 'brand', {
+            value: brand,
+            enumerable: true
+        });
         console.log(size);
         console.log(_this.size);
         Object.seal(_this);
@@ -44,9 +50,9 @@ var Bekleidung = /** @class */ (function (_super) {
     Bekleidung.info = 'Only for testing';
     return Bekleidung;
 }(Product));
-var b = new Bekleidung('L', 'Hemd', 43);
-console.log(b.info);
-//console.log(Bekleidung.info);
+var b = new Bekleidung('L', 'Hemd', 43, 'Olymp');
+//console.log(b.info);
+console.log(Bekleidung.info);
 console.log(b.size);
 console.log(b.passtDas('M'));
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=main.js.map

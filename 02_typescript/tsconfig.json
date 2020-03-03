@@ -5,7 +5,13 @@
     "sourceMap": true,
     "watch": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "lib": [
+      "dom",
+      "es5",
+      "scripthost",
+      "es2015"
+    ]
   },
   "exclude": [
     "node_modules"

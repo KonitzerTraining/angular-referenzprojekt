@@ -4,17 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { StartPageComponent } from './start-page/start-page.component';
-import { CustomersPageComponent } from './customers-page/customers-page.component';
-import { ImprintPageComponent } from './imprint-page/imprint-page.component';
+import { PageStartComponent } from './page-start/page-start.component';
+import { PageImprintComponent } from './page-imprint/page-imprint.component';
+import { PageCustomersComponent } from './page-customers/page-customers.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    StartPageComponent,
-    CustomersPageComponent,
-    ImprintPageComponent
+    PageStartComponent,
+    PageImprintComponent,
+    PageCustomersComponent
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var CustomerComponent = /** @class */ (function () {
     function CustomerComponent() {
         this.title = 'Überschrift';
+        this.subtitle = 'Kunden und so';
         this.customers = [
             {
                 "id": 5,
@@ -28,7 +29,7 @@ var CustomerComponent = /** @class */ (function () {
     }
     CustomerComponent = __decorate([
         Component({
-            template: "<h1>{{title}}</h1>"
+            template: "\n<h1>{{title}}</h1>\n<p>{{subtitle}}</p>\n"
         }),
         __metadata("design:paramtypes", [])
     ], CustomerComponent);
@@ -38,7 +39,13 @@ console.log((new CustomerComponent()).render());
 function Component(config) {
     return function (classRef) {
         classRef.prototype.render = function () {
-            return config.template.replace('{{title}}', this.title);
+            // return config.template.replace('{{title}}', this.title);
+            var _this = this;
+            var workTemplate = config.template;
+            Object.keys(this).forEach(function (prop) {
+                workTemplate = workTemplate.replace("{{" + prop + "}}", _this[prop]);
+            });
+            return workTemplate;
         };
     };
 }
