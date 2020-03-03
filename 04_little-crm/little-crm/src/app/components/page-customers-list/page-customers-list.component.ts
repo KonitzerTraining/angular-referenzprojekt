@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {CustomerService} from '../../services/customer.service';
-import {ICustomer} from '../../model/icustomer';
+import CustomerService from '../../services/customer.service';
+import ICustomer from '../../model/icustomer';
 
 @Component({
   selector: 'crm-page-customers-list',
@@ -10,7 +10,8 @@ import {ICustomer} from '../../model/icustomer';
 export class PageCustomersListComponent implements OnInit {
   public customers: ICustomer[];
 
-  constructor(private customerService: CustomerService) {
+  // Dependency injection
+  constructor(public customerService: CustomerService) {
   }
 
   ngOnInit(): void {
@@ -19,7 +20,7 @@ export class PageCustomersListComponent implements OnInit {
 
   getCustomers() {
     this.customerService
-      .getAllCustomers()
+      .getAllCustomers() // Observable
       .subscribe((customers: ICustomer[]) => {
         this.customers = customers;
       });

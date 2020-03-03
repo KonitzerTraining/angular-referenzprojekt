@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'crm-page-template-syntax',
@@ -8,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class PageTemplateSyntaxComponent implements OnInit {
 
   flag = 1;
-  constructor() { }
+  titleText: string = 'asdf asfd asdf';
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

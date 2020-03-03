@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {FormBuilder, FormGroup} from '@angular/forms';
-import {CustomerService} from '../../services/customer.service';
-import {ICustomer} from 'src/app/model/icustomer';
+import CustomerService from '../../services/customer.service';
+import ICustomer from 'src/app/model/icustomer';
 
 @Component({
   selector: 'crm-page-customer-edit',

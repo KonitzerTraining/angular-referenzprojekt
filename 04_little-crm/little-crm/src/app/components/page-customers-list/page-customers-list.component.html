@@ -1,11 +1,17 @@
 <h1>Customer List</h1>
 
+{{customerService.info}}
+
+<pre>
+{{customers | json}}
+</pre>
 <table class="table table-striped">
   <thead>
   <tr>
     <th>Id</th>
     <th>Name</th>
     <th>Purchases</th>
+    <th></th>
   </tr>
   </thead>
   <tbody>

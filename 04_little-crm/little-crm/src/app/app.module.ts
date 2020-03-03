@@ -11,26 +11,33 @@ import { PageDefaultComponent } from './components/page-default/page-default.com
 import { NavigationMainComponent } from './components/navigation-main/navigation-main.component';
 
 import { registerLocaleData } from '@angular/common';
-import localeDe from '@angular/common/locales/de';
+
 import {HttpClientModule} from '@angular/common/http';
 import { PageCustomerEditComponent } from './components/page-customer-edit/page-customer-edit.component';
 import {ReactiveFormsModule} from '@angular/forms';
 
+// Sprachanpassungen für die Formatierung
+import localeDe from '@angular/common/locales/de';
 registerLocaleData(localeDe, 'de-DE');
 
+import localeCH from '@angular/common/locales/de-CH';
+registerLocaleData(localeCH, 'de-CH');
 
 @NgModule({
   declarations: [
     AppComponent,
+    // Allgemeine Komponenten
+    NavigationMainComponent,
+
+    // Seiten
     PageStartComponent,
     PageTemplateSyntaxComponent,
     PageCustomersListComponent,
     PageDefaultComponent,
-    NavigationMainComponent,
     PageCustomerEditComponent
   ],
   imports: [
-    HttpClientModule,
+    HttpClientModule, // Für REST
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule

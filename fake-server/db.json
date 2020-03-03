@@ -8,17 +8,12 @@
     {
       "id": 2,
       "name": "Peter",
-      "purchases": 500
+      "purchases": "50067"
     },
     {
       "id": 3,
       "name": "Hans-Peter",
       "purchases": "2"
-    },
-    {
-      "id": 4,
-      "name": "H. Peter",
-      "purchases": 24
     }
   ]
 }
