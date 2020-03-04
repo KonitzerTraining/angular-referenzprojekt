@@ -8,10 +8,18 @@ import ICustomer from '../../model/icustomer';
   styleUrls: ['./page-customers-list.component.scss']
 })
 export class PageCustomersListComponent implements OnInit {
+
+  // Muss public sein für die Verwendung im HTML-Template
   public customers: ICustomer[];
+  public currencyFormat = {
+    code: 'EUR',
+    display: 'symbol',
+    format: '1.2-2',
+    local: 'de-DE'
+  };
 
   // Dependency injection
-  constructor(public customerService: CustomerService) {
+  constructor(private customerService: CustomerService) {
   }
 
   ngOnInit(): void {

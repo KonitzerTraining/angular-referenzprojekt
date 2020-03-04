@@ -5,6 +5,7 @@ import {PageTemplateSyntaxComponent} from './components/page-template-syntax/pag
 import {PageCustomersListComponent} from './components/page-customers-list/page-customers-list.component';
 import {PageDefaultComponent} from './components/page-default/page-default.component';
 import {PageCustomerEditComponent} from './components/page-customer-edit/page-customer-edit.component';
+import {CustomerNewTemplateComponent} from "./components/customer-new-template/customer-new-template.component";
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'customers',
     component: PageCustomersListComponent
+  },
+  {
+    path: 'customers/new',
+    component: CustomerNewTemplateComponent
   },
   {
     path: 'customers/:id/edit',

@@ -1,16 +1,17 @@
-<h1>Customer List</h1>
+<h1 class="display-4 my-3">Customer List</h1>
 
-{{customerService.info}}
+<!--{{customerService.info}}-->
 
-<pre>
+<!--<pre>
 {{customers | json}}
-</pre>
-<table class="table table-striped">
+</pre>-->
+<table class="table table-striped mt-4">
   <thead>
   <tr>
     <th>Id</th>
     <th>Name</th>
-    <th>Purchases</th>
+    <th>Currency Pipe</th>
+    <th>Custom Pipe</th>
     <th></th>
   </tr>
   </thead>
@@ -19,7 +20,15 @@
     <td>{{customer.id}}</td>
     <td>{{customer.name}}</td>
     <td class="text-right">
-      {{customer.purchases | currency:'EUR':'symbol':'1.2-2':'de-DE'}}
+      {{customer.purchases | currency
+        :currencyFormat.code
+        :currencyFormat.display
+        :currencyFormat.format
+        :currencyFormat.local
+      }}
+    </td>
+    <td class="text-right" [crmPurchaseWarning]="customer.purchases">
+      {{customer.purchases | currencyDe}}
     </td>
     <td>
       <button class="btn btn-danger" (click)="deleteCustomer(customer.id)">Delete</button>

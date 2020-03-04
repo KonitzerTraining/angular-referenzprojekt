@@ -14,13 +14,16 @@ import { registerLocaleData } from '@angular/common';
 
 import {HttpClientModule} from '@angular/common/http';
 import { PageCustomerEditComponent } from './components/page-customer-edit/page-customer-edit.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 // Sprachanpassungen für die Formatierung
 import localeDe from '@angular/common/locales/de';
 registerLocaleData(localeDe, 'de-DE');
 
 import localeCH from '@angular/common/locales/de-CH';
+import { CurrencyDePipe } from './pipes/currency-de.pipe';
+import { PurchaseWarningDirective } from './directives/purchase-warning.directive';
+import { CustomerNewTemplateComponent } from './components/customer-new-template/customer-new-template.component';
 registerLocaleData(localeCH, 'de-CH');
 
 @NgModule({
@@ -34,11 +37,16 @@ registerLocaleData(localeCH, 'de-CH');
     PageTemplateSyntaxComponent,
     PageCustomersListComponent,
     PageDefaultComponent,
-    PageCustomerEditComponent
+    PageCustomerEditComponent,
+    CurrencyDePipe,
+    CurrencyDePipe,
+    PurchaseWarningDirective,
+    CustomerNewTemplateComponent
   ],
   imports: [
     HttpClientModule, // Für REST
-    ReactiveFormsModule,
+    FormsModule, // Template Driven Forms
+    ReactiveFormsModule, // Reactive Forms
     BrowserModule,
     AppRoutingModule
   ],

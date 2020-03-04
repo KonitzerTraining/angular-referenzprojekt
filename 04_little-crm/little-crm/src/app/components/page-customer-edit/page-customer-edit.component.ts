@@ -11,9 +11,9 @@ import ICustomer from 'src/app/model/icustomer';
 })
 
 export class PageCustomerEditComponent implements OnInit {
-  private id: string;
-  private customer: ICustomer;
-  private customerEditForm: FormGroup = this.fb.group({
+  public id: string;
+  public customer: ICustomer;
+  public customerEditForm: FormGroup = this.fb.group({
     id: [''],
     name: [''],
     purchases: [''],
