@@ -1,0 +1,22 @@
+<h1 class="display-4 my-3">New Customer with reactive form</h1>
+
+<form (ngSubmit)="handleNewForm()">
+
+  <div class="form-group">
+    <label for="Name">Name</label>
+    <input [formControl]="name" type="text" [class.is-invalid]="!name.valid" class="form-control" required name="name" id="Name" minlength="3">
+  </div>
+
+  <div class="form-group">
+    <label for="Purchases">Purchases</label>
+    <input [formControl]="purchases" [class.is-invalid]="!purchases.valid" type="number" class="form-control" required name="purchases" id="Purchases"
+           min="0">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<pre>
+  {{name | json}}
+  {{purchases | json}}
+</pre>

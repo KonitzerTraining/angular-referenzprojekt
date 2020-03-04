@@ -24,6 +24,7 @@ import localeCH from '@angular/common/locales/de-CH';
 import { CurrencyDePipe } from './pipes/currency-de.pipe';
 import { PurchaseWarningDirective } from './directives/purchase-warning.directive';
 import { CustomerNewTemplateComponent } from './components/customer-new-template/customer-new-template.component';
+import { CustomerNewReactiveComponent } from './components/customer-new-reactive/customer-new-reactive.component';
 registerLocaleData(localeCH, 'de-CH');
 
 @NgModule({
@@ -41,7 +42,8 @@ registerLocaleData(localeCH, 'de-CH');
     CurrencyDePipe,
     CurrencyDePipe,
     PurchaseWarningDirective,
-    CustomerNewTemplateComponent
+    CustomerNewTemplateComponent,
+    CustomerNewReactiveComponent
   ],
   imports: [
     HttpClientModule, // Für REST

@@ -6,6 +6,7 @@ import {PageCustomersListComponent} from './components/page-customers-list/page-
 import {PageDefaultComponent} from './components/page-default/page-default.component';
 import {PageCustomerEditComponent} from './components/page-customer-edit/page-customer-edit.component';
 import {CustomerNewTemplateComponent} from "./components/customer-new-template/customer-new-template.component";
+import {CustomerNewReactiveComponent} from './components/customer-new-reactive/customer-new-reactive.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'customers/new',
     component: CustomerNewTemplateComponent
+  },
+  {
+    path: 'customers/new-reactive',
+    component: CustomerNewReactiveComponent
   },
   {
     path: 'customers/:id/edit',
