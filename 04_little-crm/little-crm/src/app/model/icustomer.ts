@@ -1,5 +1,5 @@
 export default interface ICustomer {
-  id: number;
+  id?: number;
   name: string;
   purchases: number;
 }

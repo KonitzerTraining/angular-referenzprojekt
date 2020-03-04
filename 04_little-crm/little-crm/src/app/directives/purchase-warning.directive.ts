@@ -12,8 +12,6 @@ export class PurchaseWarningDirective implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.el.nativeElement);
-
     if (this.crmPurchaseWarning < 1000) {
       this.el.nativeElement.classList.add('alert-danger');
     }

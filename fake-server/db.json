@@ -14,6 +14,16 @@
       "id": 3,
       "name": "Hans-Peter",
       "purchases": "2"
+    },
+    {
+      "name": "John Doe",
+      "purchases": 58951,
+      "id": 4
+    },
+    {
+      "name": "Phillip Morris",
+      "purchases": 2984392,
+      "id": 5
     }
   ]
 }
