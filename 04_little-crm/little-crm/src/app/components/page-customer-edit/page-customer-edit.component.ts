@@ -13,6 +13,7 @@ import ICustomer from 'src/app/model/icustomer';
 export class PageCustomerEditComponent implements OnInit {
   public id: string;
   public customer: ICustomer;
+
   public customerEditForm: FormGroup = this.fb.group({
     id: [''],
     name: [''],
@@ -28,22 +29,28 @@ export class PageCustomerEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.activatedRoute.snapshot.params.id;
+
     this.customerService.getOneCustomer(this.id)
       .subscribe((customer) => {
+        console.log(customer);
+
         this.customerEditForm.patchValue(customer);
       });
   }
 
   updateCustomer() {
-    console.log(this.customerEditForm.value);
+     console.log(this.customerEditForm.value);
 
     // Egentlich nicht nötig
     const customer = {
+      // Weitere Eigenschaften
+      // spread-Operator
       ...this.customerEditForm.value
     };
 
     console.log(customer);
-    this.customerService.updateCustomer(customer)
+    this.customerService.updateCustomer(this.customerEditForm.value as ICustomer)
+    // this.customerService.updateCustomer(customer)
       .subscribe(() => {
         this.router.navigate(['/customers']);
       });
