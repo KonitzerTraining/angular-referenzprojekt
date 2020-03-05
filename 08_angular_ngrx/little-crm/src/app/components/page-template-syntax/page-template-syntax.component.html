@@ -1,0 +1,27 @@
+<h1>Template Syntax</h1>
+
+<p>Direktiven (Directives) binden Daten an das Template (View)</p>
+
+<h2>Interpolation Directive</h2>
+<p>Text: {{'Inhalt'}}</p>
+<p>Pipes sind Funktionen</p>
+<p>Text + Pipe: {{'Inhalt' | uppercase}}</p>
+<p>Für i18n muss noch im module etwas hinzugefügt werden</p>
+<p>Expression: {{243.2e5 | number:'5.2-3':'de-CH'}}</p>
+<p>Expression: {{23 + 23 | currency:'EUR':'symbol':'2.2-2':'de-DE'}}</p>
+
+<h2>Structural Directives</h2>
+<p *ngIf="flag===1">Lorem ipsum dolor sit amet.</p>
+<ul *ngFor="let item of [3,4,5]">
+  <li>{{item}}</li>
+</ul>
+
+<h2>Event Directives</h2>
+<p>Binding: Vom View zur Komponente</p>
+<p><button class="btn btn-info" (click)="flag = 2">Click</button></p>
+<p><button class="btn btn-info" (click)="changeFlag(1)">Click</button></p>
+
+<h2>Attribute Directives</h2>
+<p>Die meisten gängigen HTML5-Attribute sind auch Angular-Direktiven</p>
+<p [class.alert]="flag === 1" [class.alert-info]="flag===1">Test</p>
+<p [title]="titleText">Lorem ipsum dolor sit amet, consectetur.</p>

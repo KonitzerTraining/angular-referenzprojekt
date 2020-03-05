@@ -1,0 +1,313 @@
+{
+  "monitorState": null,
+  "nextActionId": 23,
+  "stagedActionIds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+  ],
+  "skippedActionIds": [],
+  "currentStateIndex": 22,
+  "isLocked": false,
+  "isPaused": false,
+  "actionsById": {
+    "0": {
+      "action": {
+        "type": "@ngrx/store/init"
+      },
+      "timestamp": 1583403974460,
+      "type": "PERFORM_ACTION"
+    },
+    "1": {
+      "action": {
+        "type": "[Counter Component] Increment"
+      },
+      "timestamp": 1583404045357,
+      "type": "PERFORM_ACTION"
+    },
+    "2": {
+      "action": {
+        "type": "[Counter Component] Increment"
+      },
+      "timestamp": 1583404049021,
+      "type": "PERFORM_ACTION"
+    },
+    "3": {
+      "action": {
+        "type": "[Counter Component] Increment"
+      },
+      "timestamp": 1583404049653,
+      "type": "PERFORM_ACTION"
+    },
+    "4": {
+      "action": {
+        "type": "[Counter Component] Decrement"
+      },
+      "timestamp": 1583404050445,
+      "type": "PERFORM_ACTION"
+    },
+    "5": {
+      "action": {
+        "type": "[Counter Component] Decrement"
+      },
+      "timestamp": 1583404050909,
+      "type": "PERFORM_ACTION"
+    },
+    "6": {
+      "action": {
+        "type": "[Counter Component] Decrement"
+      },
+      "timestamp": 1583404051317,
+      "type": "PERFORM_ACTION"
+    },
+    "7": {
+      "action": {
+        "type": "[Counter Component] Decrement"
+      },
+      "timestamp": 1583404051701,
+      "type": "PERFORM_ACTION"
+    },
+    "8": {
+      "action": {
+        "type": "[Counter Component] Decrement"
+      },
+      "timestamp": 1583404051973,
+      "type": "PERFORM_ACTION"
+    },
+    "9": {
+      "action": {
+        "type": "[Counter Component] Decrement"
+      },
+      "timestamp": 1583404052165,
+      "type": "PERFORM_ACTION"
+    },
+    "10": {
+      "action": {
+        "type": "[Counter Component] Decrement"
+      },
+      "timestamp": 1583404052341,
+      "type": "PERFORM_ACTION"
+    },
+    "11": {
+      "action": {
+        "type": "[Counter Component] Decrement"
+      },
+      "timestamp": 1583404052517,
+      "type": "PERFORM_ACTION"
+    },
+    "12": {
+      "action": {
+        "type": "[Counter Component] Increment"
+      },
+      "timestamp": 1583404053069,
+      "type": "PERFORM_ACTION"
+    },
+    "13": {
+      "action": {
+        "type": "[Counter Component] Increment"
+      },
+      "timestamp": 1583404053253,
+      "type": "PERFORM_ACTION"
+    },
+    "14": {
+      "action": {
+        "type": "[Counter Component] Increment"
+      },
+      "timestamp": 1583404053413,
+      "type": "PERFORM_ACTION"
+    },
+    "15": {
+      "action": {
+        "type": "[Counter Component] Increment"
+      },
+      "timestamp": 1583404053581,
+      "type": "PERFORM_ACTION"
+    },
+    "16": {
+      "action": {
+        "type": "[Counter Component] Increment"
+      },
+      "timestamp": 1583404053757,
+      "type": "PERFORM_ACTION"
+    },
+    "17": {
+      "action": {
+        "type": "[Counter Component] Increment"
+      },
+      "timestamp": 1583404059237,
+      "type": "PERFORM_ACTION"
+    },
+    "18": {
+      "action": {
+        "type": "[Counter Component] Increment"
+      },
+      "timestamp": 1583404059677,
+      "type": "PERFORM_ACTION"
+    },
+    "19": {
+      "action": {
+        "type": "[Counter Component] Increment"
+      },
+      "timestamp": 1583404059973,
+      "type": "PERFORM_ACTION"
+    },
+    "20": {
+      "action": {
+        "type": "[Counter Component] Increment"
+      },
+      "timestamp": 1583404060389,
+      "type": "PERFORM_ACTION"
+    },
+    "21": {
+      "action": {
+        "type": "[Counter Component] Increment"
+      },
+      "timestamp": 1583404060717,
+      "type": "PERFORM_ACTION"
+    },
+    "22": {
+      "action": {
+        "type": "[Counter Component] Increment"
+      },
+      "timestamp": 1583404061109,
+      "type": "PERFORM_ACTION"
+    }
+  },
+  "computedStates": [
+    {
+      "state": {
+        "count": 0
+      }
+    },
+    {
+      "state": {
+        "count": 1
+      }
+    },
+    {
+      "state": {
+        "count": 2
+      }
+    },
+    {
+      "state": {
+        "count": 3
+      }
+    },
+    {
+      "state": {
+        "count": 2
+      }
+    },
+    {
+      "state": {
+        "count": 1
+      }
+    },
+    {
+      "state": {
+        "count": 0
+      }
+    },
+    {
+      "state": {
+        "count": -1
+      }
+    },
+    {
+      "state": {
+        "count": -2
+      }
+    },
+    {
+      "state": {
+        "count": -3
+      }
+    },
+    {
+      "state": {
+        "count": -4
+      }
+    },
+    {
+      "state": {
+        "count": -5
+      }
+    },
+    {
+      "state": {
+        "count": -4
+      }
+    },
+    {
+      "state": {
+        "count": -3
+      }
+    },
+    {
+      "state": {
+        "count": -2
+      }
+    },
+    {
+      "state": {
+        "count": -1
+      }
+    },
+    {
+      "state": {
+        "count": 0
+      }
+    },
+    {
+      "state": {
+        "count": 1
+      }
+    },
+    {
+      "state": {
+        "count": 2
+      }
+    },
+    {
+      "state": {
+        "count": 3
+      }
+    },
+    {
+      "state": {
+        "count": 4
+      }
+    },
+    {
+      "state": {
+        "count": 500
+      }
+    },
+    {
+      "state": {
+        "count": 1520
+      }
+    }
+  ]
+}

@@ -24,11 +24,6 @@
       "id": 5,
       "name": "Phillip Morris",
       "purchases": 2984392
-    },
-    {
-      "name": "test",
-      "purchases": 234,
-      "id": 6
     }
   ]
 }

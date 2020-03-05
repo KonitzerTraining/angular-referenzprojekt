@@ -1,0 +1,22 @@
+<h1 class="display-4 my-3">New Customer</h1>
+
+<form (ngSubmit)="handleNewForm()">
+
+  <div class="form-group">
+    <label for="Name">Name</label>
+    <input type="text" class="form-control" required  name="name" id="Name" [class.is-invalid]="name.invalid && name.touched" minlength="3" [(ngModel)]="customer.name" #name="ngModel">
+  </div>
+
+<!--  <pre>
+    {{name.valid}}
+    {{name.invalid}}
+    {{name.touched}}
+    {{name.dirty}}
+  </pre>-->
+  <div class="form-group">
+    <label for="Purchases">Purchases</label>
+    <input type="number" class="form-control" required name="purchases" id="Purchases" [class.is-invalid]="purchases.invalid && purchases.touched" min="0" [(ngModel)]="customer.purchases" #purchases="ngModel">
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="name.invalid || purchases.invalid">Submit</button>
+</form>

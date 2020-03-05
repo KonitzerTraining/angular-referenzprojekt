@@ -1,0 +1,37 @@
+<h1 class="display-4 my-3">Customer List</h1>
+
+<crm-widget-spinner *ngIf="(customers$ | async)?.loading"></crm-widget-spinner>
+
+
+<table class="table table-striped mt-4">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Currency Pipe</th>
+    <th>Custom Pipe</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let customer of (customers$ | async)?.customers">
+    <td>{{customer.id}}</td>
+    <td>{{customer.name}}</td>
+    <td class="text-right">
+      {{customer.purchases | currency
+      :currencyFormat.code
+        :currencyFormat.display
+        :currencyFormat.format
+        :currencyFormat.local
+      }}
+    </td>
+    <td class="text-right" [crmPurchaseWarning]="customer.purchases">
+      {{customer.purchases | currencyDe}}
+    </td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteCustomer(customer.id)">Delete</button>
+      <button class="btn btn-secondary ml-3" [routerLink]="[customer.id,'edit']">Edit</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
