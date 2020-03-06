@@ -4,7 +4,7 @@ import ICustomer from '../../model/icustomer';
 import {select, Store} from '@ngrx/store';
 import {loadCustomers, deleteCustomer} from '../../store/actions/customer/customer.actions';
 import {CustomerState} from '../../store/reducers/customer/customer.reducer';
-import {selectCustomerState} from '../../store/selectors/customer/customer.selectors';
+import {selectCustomerState, selectLoadingState} from '../../store/selectors/customer/customer.selectors';
 import {Observable} from 'rxjs';
 
 @Component({
@@ -25,6 +25,9 @@ export class PageCustomersListComponent implements OnInit {
 
   // Dependency injection
   public customers$: Observable<CustomerState>;
+  public loading$: Observable<boolean>;
+  public loading = false;
+
 
   constructor(
     private customerService: CustomerService,
@@ -35,6 +38,10 @@ export class PageCustomersListComponent implements OnInit {
     this.store.dispatch(loadCustomers());
 
     this.customers$ = this.store.pipe(select(selectCustomerState));
+
+    this.store.pipe(select(selectLoadingState)).subscribe((loading) =>  {
+      console.log(loading);
+    });
   }
 
   deleteCustomer(id: number) {

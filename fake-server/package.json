@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "start": "json-server --watch db.json -d 500",
-    "custom": "json-server --watch db.json --routes routes.json -d 500"
+    "custom": "json-server --watch db.json --routes routes.json -d 500",
+    "pwa": "json-server --watch db.json --routes routes.json -d 500 --static ../10_angular_pwa/little-crm/dist/little-crm"
   },
   "keywords": [],
   "author": "",
